@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jim's Form</title>
+<style>
+
+/** {
+    border: 1px solid red !important;
+}*/
+.main {
+    width: 760px;
+    margin: 0 auto;
+    color:rgba(255, 255, 255, 0.8);
+    font-family:Tahoma, Geneva, sans-serif;	
+    background-color: rgba(0, 51, 155, 0.8);
+}
+
+h1 {
+    font-size: 4em;
+    border-bottom: dotted 2px rgba(255,255,255,.5);
+	padding-bottom: 4px;	
+	margin: 25px 0;
+}
+
+p {
+	margin-bottom: 25px;	
+}
+
+
+.textBoxes {
+    font-size: 1.2em;
+}
+
+.textBoxes .label {
+
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    text-align: right;
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-weight: bold;
+    color: rgba(255,255,255,.5);
+}
+
+.textBoxes input[type="submit"] {  
+  margin-left: 220px;
+  padding: 10px 25px;
+  font-size: 1em;
+  color: white;
+  background: rgb(0,102,153);
+  background: -webkit-linear-gradient(rgba(255,255,255,.1) 40%, rgba(255,255,255,.5));
+  background: -moz-linear-gradient(rgba(255,255,255,.1) 40%, rgba(255,255,255,.5));
+  background: -o-linear-gradient(rgba(255,255,255,.1) 40%, rgba(255,255,255,.5));
+  background: linear-gradient(rgba(255,255,255,.1) 40%, rgba(255,255,255,.5));
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 4px white;
+}
+.textBoxes select {
+	font-size: 1.2em;
+}
+
+.textBoxes input[type="text"], .textBoxes textarea  {
+	font-size: 1.2em;
+	color: rgb(255,255,255,1);
+	border-radius: 5px;
+	border: none;
+	background-color: rgba(255,255,255,.5);	
+	box-shadow: inset 0 0 10px rgba(255,255,255,.75);
+	width: 500px;
+	padding: 5px;	
+}
+.textBoxes input[type="text"]:focus,.textBoxes textarea:focus {
+  background-color: rgba(240, 230, 0, 0.6);
+  border: 1px dashed black;
+  box-shadow: 2px 2px gray;
+  color: black;
+}
+
+.textBoxes input[type="radio"] {
+    margin: 15px;
+}
+</style>
+
+</head>
+
+<body class="main">
+    <h1>Registration Form</h1>
+<form class="textBoxes" method="POST" action="action.php">
+    <p>
+        <label class="label" for="f_Name">First Name:</label>
+        <input type="text" name="name" id="f_Name">
+    </p>
+    <p>
+        <label class="label" for="l_Name">Last Name:</label>
+        <input type="text" name="name" id="l_Name">
+    </p>
+    <p>
+        <label class="label" for="e_Mail">E-Mail Address:</label>
+        <input type="text" name="name" id="e_Mail">
+    </p>
+
+    <p>
+        <span class="label">Rate Your Coding skills</span>
+        <label>
+            <input name="skill" type="radio" value="novice"Novice>Novice</label>
+        <label>
+            <input name="skill" type="radio" value="intermediate">Intermediate</label>
+        <label>
+            <input name="skill" type="radio" value="expert">Expert</label>
+    </p>
+
+    <p>
+        <label for="language" class="label">Prefered Programming Language</label>
+            <select name="language" id="language">
+                <option value="null">Select One</option>
+                <option value="1">Html</option>
+                <option value="2">Css</option>
+                <option value="3">Java Script</option>
+            </select>
+    </p>
+
+    <p>
+        <label for="comments"  class="label">Any additional comments? </label>
+        <textarea name="comments" cols="35" rows="4" id="comments"></textarea>
+    </p>
+    
+    <p>
+        <input name="button" type="submit" value="Subscribe">
+    </p>
+</form>
+
+</body>
+</html>
